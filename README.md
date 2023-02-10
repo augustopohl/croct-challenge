@@ -6,7 +6,7 @@ Create a React component using Typescript to let users upload and crop avatars.
 
 <br>
 
-## 🧪 Tecnologias / Techs
+## 🧪 Techs
 
 This project was developed with the following technologies:
 
