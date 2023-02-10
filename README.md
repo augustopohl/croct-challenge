@@ -36,5 +36,5 @@ $ yarn dev
 $ yarn jest
 ```
 
-The app is availabre on your browser via http://localhost:5173/
+The app is available on your browser via http://localhost:5173/
 
