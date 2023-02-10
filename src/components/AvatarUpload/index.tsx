@@ -38,7 +38,7 @@ const AvatarUpload = ({ size = 140, scale = 0.5, onChange }: Props) => {
         };
     };
 
-    function checkImageFile(currentFile: Blob) {
+    const checkImageFile = (currentFile: Blob) => {
         if (new RegExp("image/*").test(currentFile.type)) {
             const reader = new FileReader();
             reader.onload = (e: any) => {
