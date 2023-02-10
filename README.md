@@ -6,7 +6,7 @@ Create a React component using Typescript to let users upload and crop avatars.
 
 <br>
 
-## 🧪 Tecnologias / Techs
+## 🧪 Techs
 
 This project was developed with the following technologies:
 
@@ -36,5 +36,5 @@ $ yarn dev
 $ yarn jest
 ```
 
-The app is availabre on your browser via http://localhost:5173/
+The app is available on your browser via http://localhost:5173/
 
