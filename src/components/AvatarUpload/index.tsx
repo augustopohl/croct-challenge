@@ -25,7 +25,7 @@ interface Props {
 }
 
 const AvatarUpload = ({ size = 140, scale = 0.5, onChange }: Props) => {
-    const [src, setSrc] = useState(null);
+    const [imageSrc, setImageSrc] = useState(null);
     const [step, setStep] = useState(0);
     const [imgScale, setImgScale] = useState<SetStateAction<any>>(scale);
     const imageRef = useRef(null);
@@ -44,7 +44,7 @@ const AvatarUpload = ({ size = 140, scale = 0.5, onChange }: Props) => {
             reader.onload = (e: any) => {
                 setStep(1)
                 setImgScale(scale)
-                setSrc(e.target.result)
+                setImageSrc(e.target.result)
             };
             reader.readAsDataURL(currentFile);
         } else {
@@ -64,7 +64,7 @@ const AvatarUpload = ({ size = 140, scale = 0.5, onChange }: Props) => {
     };
 
     const handleCancel = () => {
-        setSrc(null);
+        setImageSrc(null);
         setStep(0)
         setImgScale(scale)
     };
@@ -75,7 +75,7 @@ const AvatarUpload = ({ size = 140, scale = 0.5, onChange }: Props) => {
 
     const handleSave = () => {
         setStep(2)
-        setSrc(imageRef.current.src)
+        setImageSrc(imageRef.current.src)
         onChange(imageRef.current.src)
     };
 
@@ -130,7 +130,7 @@ const AvatarUpload = ({ size = 140, scale = 0.5, onChange }: Props) => {
                     <ContentBox>
                         <CircleAvatarContainer style={avatarCircleStyles}>
                             <div style={imgStyles}>
-                                <img ref={imageRef} src={src} />
+                                <img ref={imageRef} src={imageSrc} />
                             </div>
                         </CircleAvatarContainer>
                         <InfoContainer>
@@ -173,7 +173,7 @@ const AvatarUpload = ({ size = 140, scale = 0.5, onChange }: Props) => {
                     <ContentBox>
                         <CircleAvatarContainer style={avatarCircleStyles}>
                             <div style={imgStyles}>
-                                <img ref={imageRef} src={src} />
+                                <img ref={imageRef} src={imageSrc} />
                             </div>
                         </CircleAvatarContainer>
                         <InfoBox>
